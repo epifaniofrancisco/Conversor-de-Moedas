@@ -12,7 +12,7 @@ from Funcoes.Conversores import conversor_kwanza, conversor_euro, conversor_dola
 while 1:
     apresentacao()
 
-    escolha = int(input("Converter: "))
+    escolha = int(input("Converter para: "))
 
     if escolha == 1:
         conversor_kwanza()
