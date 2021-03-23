@@ -12,7 +12,7 @@ def apresentacao():
           "\n\t\t\t\t\t\t | - - - - - - - - - -||- - - - - - - - - - |"
           "\n\t\t\t\t\t\t |      M O E D A S   ||     O P Ç Ã O      |"
           "\n\t\t\t\t\t\t | - - - - - - - - - -||- - - - - - - - - - |"
-          "\n\t\t\t\t\t\t | 1 - KWAMZA <-> KZ  ||         1          |"
+          "\n\t\t\t\t\t\t | 1 - KWANZA <-> KZ  ||         1          |"
           "\n\t\t\t\t\t\t | 2 - EURO  <-> £    ||         2          |"
           "\n\t\t\t\t\t\t | 3 - DOLAR  <-> USD ||         3          |"
           "\n\t\t\t\t\t\t | 4 - REAIS <-> RS   ||         4          |"

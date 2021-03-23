@@ -10,6 +10,8 @@
         * BTC
 
  Passos:
-    - Criar um conversor básico no Console
-    - Adicionar um GUI (Tkinter, PyGUIsimple)
-    - Criar um app
+    - Criar um conversor básico no Console.
+    - Usuar API para pegar dados em tempo real.
+    - Armazenar dados em um Banco de Dados ou Json.
+    - Adicionar um GUI (Tkinter, PyGUIsimple).
+    - Criar um app.
