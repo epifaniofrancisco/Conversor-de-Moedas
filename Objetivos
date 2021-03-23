@@ -1,0 +1,15 @@
+ Objetivos:
+    - Converter moedas
+
+    Tipos de moedas:
+        * Kwanza
+        * Euro
+        * Dolar
+        * Reais
+        * Libras
+        * BTC
+
+ Passos:
+    - Criar um conversor básico no Console
+    - Adicionar um GUI (Tkinter, PyGUIsimple)
+    - Criar um app
