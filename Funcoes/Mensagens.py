@@ -2,6 +2,7 @@
     Mostrador de mensagens e informações sobre conversões
 """
 
+
 def mensagens(x):
     if x == 1:
         print("\n| - - - - - - - - - - - - - - - - - -|"
@@ -9,7 +10,7 @@ def mensagens(x):
               "\n| - - - - - - - - - - - - - - - - - -|")
     if x == 2:
         print("\n| - - - - - - - - - - - - - - - - - -|"
-              "\n|        VOCÊ ESCOLHEU EURO         |"
+              "\n|        VOCÊ ESCOLHEU EURO          |"
               "\n| - - - - - - - - - - - - - - - - - -|")
     if x == 3:
         print("\n| - - - - - - - - - - - - - - - - - -|"
@@ -21,7 +22,7 @@ def mensagens(x):
               "\n| - - - - - - - - - - - - - - - - - -|")
     if x == 5:
         print("\n| - - - - - - - - - - - - - - - - - -|"
-              "\n|        VOCÊ ESCOLHEU LIBRAS         |"
+              "\n|        VOCÊ ESCOLHEU LIBRAS        |"
               "\n| - - - - - - - - - - - - - - - - - -|")
     if x == 6:
         print("\n| - - - - - - - - - - - - - - - - - -|"

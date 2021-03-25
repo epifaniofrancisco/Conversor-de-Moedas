@@ -9,14 +9,12 @@ from Funcoes.conectado import conexao
 def Currency():
     if conexao():
         api = requests.get(
-            'https://www.freeforexapi.com/api/live?pairs=USDAOA,USDEUR,USDBRL,USDGBP,EURUSD,EURGBP,GBPUSD')  # Estou usando essa API grátis
+            'https://www.freeforexapi.com/api/live?pairs=USDAOA,USDEUR,USDBRL,USDGBP,EURUSD,EURGBP,GBPUSD')
         dados = api.json()
 
         with open('dados.json', 'w') as ficheiro:
             json.dump(dados, ficheiro)
-        moedas = [dados["rates"]["USDAOA"]["rate"], dados["rates"]["USDEUR"]["rate"], dados["rates"]["USDBRL"]["rate"],
-                  dados["rates"]["USDGBP"]["rate"], dados["rates"]["EURUSD"]["rate"], dados["rates"]["EURGBP"]["rate"],
-                  dados["rates"]["GBPUSD"]["rate"]]
+        moedas = [dados["rates"]["USDAOA"]["rate"], dados["rates"]["USDEUR"]["rate"], dados["rates"]["USDBRL"]["rate"], dados["rates"]["USDGBP"]["rate"], dados["rates"]["EURUSD"]["rate"], dados["rates"]["EURGBP"]["rate"], dados["rates"]["GBPUSD"]["rate"]]
         return moedas
 
     elif not conexao():
@@ -31,3 +29,7 @@ def Currency():
             return moedas
         else:
             sys.exit('Ligue-se a Internet para baixar os dados.')
+
+dados = Currency()
+
+print(dados)

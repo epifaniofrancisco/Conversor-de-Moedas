@@ -6,7 +6,7 @@
 
 
 from Funcoes.Apresentacao import apresentacao
-from Funcoes.Conversores import conversor_kwanza, conversor_euro, conversor_dolar, conversor_reais, conversor_lbras
+from Funcoes.Conversores import conversor_kwanza, conversor_euro, conversor_dolar, conversor_reais, conversor_libras
 
 
 while 1:
@@ -23,7 +23,7 @@ while 1:
     if escolha == 4:
         conversor_reais()
     if escolha == 5:
-        conversor_lbras()
+        conversor_libras()
 
     if escolha == 0:
         break
