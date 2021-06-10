@@ -9,7 +9,6 @@
 """
 
 from Funcoes.Mensagens import mensagens
-
 from Funcoes.Conversores_Calculo import convertAOA_EUR, convertAOA_USD, convertAOA_BRL, convertAOA_GBP  # KWANZA
 from Funcoes.Conversores_Calculo import convertEUR_AOA, convertEUR_USD, convertEUR_BRL, convertEUR_GBP  # EURO
 from Funcoes.Conversores_Calculo import convertUSD_AOA, convertUSD_EUR, convertUSD_BRL, convertUSD_GBP  # DÓLAR

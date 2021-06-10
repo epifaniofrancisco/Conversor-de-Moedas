@@ -9,7 +9,7 @@ from Funcoes.Apresentacao import apresentacao
 from Funcoes.Conversores import conversor_kwanza, conversor_euro, conversor_dolar, conversor_reais, conversor_libras
 
 
-while 1:
+while True:
     apresentacao()
 
     escolha = int(input("Converter para: "))

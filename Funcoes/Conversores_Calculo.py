@@ -1,3 +1,10 @@
+"""
+
+Módulo criado para cálculos de conversão.
+
+"""
+
+
 """ KWANZA - AOA """
 
 

@@ -1,3 +1,9 @@
+"""
+
+Módulo criado para verificar a conexão de internet no dispostivo.
+
+"""
+
 import socket
 
 

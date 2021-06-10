@@ -1,5 +1,6 @@
 """
-    Mostrador de mensagens e informações sobre conversões
+    Mostrador de mensagens e informações sobre conversões.
+
 """
 
 
