@@ -15,16 +15,21 @@ def conectado():
     return False
 
 
-def conversao():
+def pegaAPI():
+    response = requests.get('https://economia.awesomeapi.com.br/json/last/'
+                            'EUR-AOA,EUR-USD,EUR-BRL,EUR-GBP,'
+                            'USD-AOA,USD-EUR,USD-BRL,USD-GBP,'
+                            'BRL-EUR,BRL-USD,BRL-GBP,'
+                            'GBP-EUR,GBP-USD,GBP-BRL')
+
+    return response.json()
+
+
+def dadosAPI():
     if conectado():
 
-        response = requests.get('https://economia.awesomeapi.com.br/json/last/'
-                                'EUR-AOA,EUR-USD,EUR-BRL,EUR-GBP,'
-                                'USD-AOA,USD-EUR,USD-BRL,USD-GBP,'
-                                'BRL-EUR,BRL-USD,BRL-GBP,'
-                                'GBP-EUR,GBP-USD,GBP-BRL')
+        dados = pegaAPI()
 
-        dados = response.json()
         with open('data.json', 'w') as outfile:
             json.dump(dados, outfile)
         exchange = [dados["EURAOA"]["bid"], dados["EURUSD"]["bid"], dados["EURBRL"]["bid"], dados["EURGBP"]["bid"],
@@ -44,4 +49,4 @@ def conversao():
                             dados["GBPUSD"]["bid"], dados["GBPBRL"]["bid"]]
                 return exchange
         else:
-            sys.exit("Connecte a internet para baixar os dados.")
+            sys.exit("Conecte-se a internet para baixar os dados.")

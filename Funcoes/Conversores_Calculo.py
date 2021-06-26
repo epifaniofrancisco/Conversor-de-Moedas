@@ -8,27 +8,26 @@ Módulo criado para cálculos de conversão.
 
 
 def convertAOA_EUR(valor, EUR, USD):
-    # EUR: valor de conversao de 1 dólar para euros.
-    # USD: valor de conversao de 1 dólar para kwanza.
-
-    return round(convertAOA_USD(valor, USD) * EUR, 2)
+    # EUR: valor de conversão de 1 dólar para euros.
+    # USD: valor de conversão de 1 dólar para kwanza.
+    return round(convertAOA_USD(valor, USD) * EUR, 4)
 
 
 def convertAOA_USD(valor, USD):
-    # USD é o valor que 1 dólar equivale a x kwanzas.
-    return round(valor * (1 / USD), 5)
+    # USD é o valor que 1 dólar equivale a kwanzas.
+    return round(valor * (1 / USD), 4)
 
 
 def convertAOA_BRL(valor, BRL, USD):
-    # BRL: valor de conversao de 1 dólar para reais.
-    # USD: valor de conversao de 1 dólar para kwanza.
-    return round(convertAOA_USD(valor, USD) * BRL, 2)
+    # BRL: valor de conversão de 1 dólar para reais.
+    # USD: valor de conversão de 1 dólar para kwanza.
+    return round(convertAOA_USD(valor, USD) * BRL, 4)
 
 
 def convertAOA_GBP(valor, GBP, USD):
-    # GBP: valor de conversao de 1 dólar para libras.
-    # USD: valor de conversao de 1 dólar para kwanza.
-    return round(convertAOA_USD(valor, USD) * GBP, 2)
+    # GBP: valor de conversão de 1 dólar para libras.
+    # USD: valor de conversão de 1 dólar para kwanza.
+    return round(convertAOA_USD(valor, USD) * GBP, 4)
 
 
 """ EURO - EUR """
@@ -81,12 +80,11 @@ def convertUSD_GBP(valor, GBP):
 
 
 def convertBRL_AOA(valor, BRL, AOA):
-    """
-    INCOMPLETO
-    """
-    res = (1 / BRL) * valor
+    # BRL: valor da conversão de 1 dólar para real.
+    # AOA: valor da conversão de 1 dólar para kwanza.
+    res = round(((1 / BRL) * valor), 4)
     print(res)
-    return round(convertAOA_USD(res, AOA), 2)
+    return round(res * AOA, 4)
 
 
 def convertBRL_EUR(valor, EUR):
@@ -108,8 +106,9 @@ def convertBRL_GBP(valor, GBP):
 
 
 def convertGBP_AOA(valor, GBP, AOA):
-    # Verificar..
-    res = round(((1 / GBP) * valor), 2)
+    # GBP: valor da conversão de 1 dólar para libra.
+    # AOA: valor da conversão de 1 dólar para kwanza.
+    res = round(((1 / GBP) * valor), 4)
     print(res)
     return round(res * AOA, 2)
 
