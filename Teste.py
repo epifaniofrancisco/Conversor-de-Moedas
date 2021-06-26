@@ -4,14 +4,12 @@
  ** Função: Converter moedas.
 """
 
-
-from Funcoes.Apresentacao import apresentacao
+from Funcoes.Mensagens import apresentacao
 from Funcoes.Conversores import conversor_kwanza, conversor_euro, conversor_dolar, conversor_reais, conversor_libras
-
 
 while True:
     while True:
-        opcao = str(input("Quer converter? [S/N): ")).lower()
+        opcao = str(input("Quer converter? [S/N]: ")).lower()
 
         if opcao in "s" or opcao in "n":
             break
@@ -54,6 +52,3 @@ print("\t\t\t\t\t\t\t\t | FIM DO PROGRAMA |")
 print("\t\t\t\t\t\t\t\t | - - - - - - - - |")
 print("\t\t\t\t\t\t\t\t\t \033[32m A C E D E \033[m")
 print("\t\t\t\t\t\t\t\t | - - - - - - - - |")
-
-
-

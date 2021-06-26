@@ -9,15 +9,14 @@
 """
 
 from Funcoes.Mensagens import mensagens
-from API.api import dadosAPI
+from API.api import dados_api
 from Funcoes.Conversores_Calculo import convertAOA_EUR, convertAOA_USD, convertAOA_BRL, convertAOA_GBP  # KWANZA
 from Funcoes.Conversores_Calculo import convertEUR_AOA, convertEUR_USD, convertEUR_BRL, convertEUR_GBP  # EURO
 from Funcoes.Conversores_Calculo import convertUSD_AOA, convertUSD_EUR, convertUSD_BRL, convertUSD_GBP  # DÓLAR
 from Funcoes.Conversores_Calculo import convertBRL_AOA, convertBRL_EUR, convertBRL_USD, convertBRL_GBP  # REAIS
 from Funcoes.Conversores_Calculo import convertGBP_AOA, convertGPB_EUR, convertGPB_USD, convertGBP_BRL  # LIBRA
 
-
-dados = dadosAPI()
+dados = dados_api()
 
 
 def conversor_kwanza():
@@ -31,7 +30,7 @@ def conversor_kwanza():
               "\n|    KWANZA PARA EURO     |"
               "\n| - - - - - - - - - - - - |")
 
-        print("{} Kz equivalem a {} Euros.".format(valor, convertAOA_EUR(valor, float(dados[5]), float(dados[4]))))
+        print("\n{} Kz equivalem a {} Euros.".format(valor, convertAOA_EUR(valor, float(dados[5]), float(dados[4]))))
 
     if escolha == 2:
         print("\n| - - - - - - - - - - - - |"

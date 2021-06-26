@@ -1,6 +1,5 @@
 import os
 import sys
-
 import requests
 import socket
 import json
@@ -15,7 +14,7 @@ def conectado():
     return False
 
 
-def pegaAPI():
+def pega_api():
     response = requests.get('https://economia.awesomeapi.com.br/json/last/'
                             'EUR-AOA,EUR-USD,EUR-BRL,EUR-GBP,'
                             'USD-AOA,USD-EUR,USD-BRL,USD-GBP,'
@@ -25,10 +24,9 @@ def pegaAPI():
     return response.json()
 
 
-def dadosAPI():
+def dados_api():
     if conectado():
-
-        dados = pegaAPI()
+        dados = pega_api()
 
         with open('data.json', 'w') as outfile:
             json.dump(dados, outfile)
