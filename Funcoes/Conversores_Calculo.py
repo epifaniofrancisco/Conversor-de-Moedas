@@ -35,22 +35,22 @@ def convertAOA_GBP(valor, GBP, USD):
 
 def convertEUR_AOA(valor, AOA):
     # AOA: valor da cotaçao de 1 euro para kwanza.
-    return round(valor * AOA, 2)
+    return round(valor * AOA, 4)
 
 
 def convertEUR_USD(valor, USD):
     # USD: valor da cotação de 1 euro para dolar.
-    return round(valor * USD, 2)
+    return round(valor * USD, 4)
 
 
 def convertEUR_BRL(valor, BRL):
     # BRL: valor da cotação de 1 euro para reais.
-    return round(valor * BRL, 2)
+    return round(valor * BRL, 4)
 
 
 def convertEUR_GBP(valor, GBP):
     # GBP: valor da cotação de 1 euro para libras.
-    return round(valor * GBP, 2)
+    return round(valor * GBP, 4)
 
 
 """ DÓLAR - USD"""
@@ -58,22 +58,22 @@ def convertEUR_GBP(valor, GBP):
 
 def convertUSD_AOA(valor, AOA):
     # AOA: valor da cotação de 1 dolar para kwanza.
-    return round(valor * AOA, 2)
+    return round(valor * AOA, 4)
 
 
 def convertUSD_EUR(valor, EUR):
     # EUR: valor da cotação de 1 dolar para euro.
-    return round(valor * EUR, 2)
+    return round(valor * EUR, 4)
 
 
 def convertUSD_BRL(valor, BRL):
     # BRL: valor da cotação de 1 dolar para reais.
-    return round(valor * BRL, 2)
+    return round(valor * BRL, 4)
 
 
 def convertUSD_GBP(valor, GBP):
     # AOA: valor da cotação de 1 dolar para libras.
-    return round(valor * GBP, 2)
+    return round(valor * GBP, 4)
 
 
 """ REAIS - BRL """

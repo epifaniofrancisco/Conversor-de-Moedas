@@ -107,7 +107,7 @@ def conversor_dolar():
               "\n|    DOLAR PARA EURO      |"
               "\n| - - - - - - - - - - - - |")
 
-        print("\n{} Dolares equivalem a {} Euros.".format(valor, convertUSD_EUR(valor, dados[5])))
+        print("\n{} Dolares equivalem a {} Euros.".format(valor, convertUSD_EUR(valor, float(dados[5]))))
 
     if escolha == 3:
         print("\n| - - - - - - - - - - - - |"
@@ -135,7 +135,7 @@ def conversor_reais():
               "\n|    REAIS PARA KWANZA    |"
               "\n| - - - - - - - - - - - - |")
 
-        print("\n{} Reais equivalem a {} Kz.".format(valor, convertBRL_AOA(valor, float(dados[6]), dados[4])))
+        print("\n{} Reais equivalem a {} Kz.".format(valor, convertBRL_AOA(valor, float(dados[6]), float(dados[4]))))
 
     if escolha == 2:
         print("\n| - - - - - - - - - - - - |"

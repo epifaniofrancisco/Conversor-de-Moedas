@@ -1,9 +1,11 @@
 from PyQt6 import uic, QtWidgets
+from PyQt6.QtWidgets import QMessageBox
 from API.api import dados_api
-from ConversoresGUI import EURAOA, EURUSD, EURBRL, EURGBP
-from ConversoresGUI import USDAOA, USDEUR, USDBRL, USDGBP
-from ConversoresGUI import BRLAOA, BRLEUR, BRLUSD, BRLGBP
-from ConversoresGUI import GBPAOA, GBPEUR, GBPUSD, GBPBRL
+from ConversoresGUI import convertAOAEUR, convertAOAUSD, convertAOABRL, convertAOAGBP
+from ConversoresGUI import convertEURAOA, convertEURUSD, convertEURBRL, convertEURGBP
+from ConversoresGUI import convertUSDAOA, convertUSDEUR, convertUSDBRL, convertUSDGBP
+from ConversoresGUI import convertBRLAOA, convertBRLEUR, convertBRLUSD, convertBRLGBP
+from ConversoresGUI import convertGBPAOA, convertGBPEUR, convertGBPUSD, convertGBPBRL
 
 dados = dados_api()
 
@@ -12,41 +14,55 @@ def converter():
     moedaDe = tela.cmbBoxDe.currentText()
     moedaPara = tela.cmbBoxPara.currentText()
 
+    valor = tela.txtBoxDe.text()
+
+    if valor == "":
+        QMessageBox.about(tela, "ALERTA", "DIGITE UM NÚMERO PARA CONVERTER.")
+
+    if moedaDe == "AOA - KWANZA" and moedaPara == "EUR - EURO":
+        convertAOAEUR(tela)
+    if moedaDe == "AOA - KWANZA" and moedaPara == "USD - DOLAR":
+        convertAOAUSD(tela)
+    if moedaDe == "AOA - KWANZA" and moedaPara == "BRL - REAIS":
+        convertAOABRL(tela)
+    if moedaDe == "AOA - KWANZA" and moedaPara == "GBP - LIBRAS":
+        convertAOAGBP(tela)
+
     if moedaDe == "EUR - EURO" and moedaPara == "AOA - KWANZA":
-        EURAOA(tela)
+        convertEURAOA(tela)
     if moedaDe == "EUR - EURO" and moedaPara == "USD - DOLAR":
-        EURUSD(tela)
+        convertEURUSD(tela)
     if moedaDe == "EUR - EURO" and moedaPara == "BRL - REAIS":
-        EURBRL(tela)
+        convertEURBRL(tela)
     if moedaDe == "EUR - EURO" and moedaPara == "GBP - LIBRAS":
-        EURGBP(tela)
+        convertEURGBP(tela)
 
     if moedaDe == "USD - DOLAR" and moedaPara == "AOA - KWANZA":
-        USDAOA(tela)
+        convertUSDAOA(tela)
     if moedaDe == "USD - DOLAR" and moedaPara == "EUR - EURO":
-        USDEUR(tela)
+        convertUSDEUR(tela)
     if moedaDe == "USD - DOLAR" and moedaPara == "BRL - REAIS":
-        USDBRL(tela)
+        convertUSDBRL(tela)
     if moedaDe == "USD - DOLAR" and moedaPara == "GBP - LIBRAS":
-        USDGBP(tela)
+        convertUSDGBP(tela)
 
     if moedaDe == "BRL - REAIS" and moedaPara == "AOA - KWANZA":
-        BRLAOA(tela)
+        convertBRLAOA(tela)
     if moedaDe == "BRL - REAIS" and moedaPara == "EUR - EURO":
-        BRLEUR(tela)
+        convertBRLEUR(tela)
     if moedaDe == "BRL - REAIS" and moedaPara == "USD - DOLAR":
-        BRLUSD(tela)
+        convertBRLUSD(tela)
     if moedaDe == "BRL - REAIS" and moedaPara == "GBP - LIBRAS":
-        BRLGBP(tela)
+        convertBRLGBP(tela)
 
     if moedaDe == "GBP - LIBRAS" and moedaPara == "AOA - KWANZA":
-        GBPAOA(tela)
+        convertGBPAOA(tela)
     if moedaDe == "GBP - LIBRAS" and moedaPara == "EUR - EURO":
-        GBPEUR(tela)
+        convertGBPEUR(tela)
     if moedaDe == "GBP - LIBRAS" and moedaPara == "USD - DOLAR":
-        GBPUSD(tela)
+        convertGBPUSD(tela)
     if moedaDe == "GBP - LIBRAS" and moedaPara == "BRL - REAIS":
-        GBPBRL(tela)
+        convertGBPBRL(tela)
 
 
 app = QtWidgets.QApplication([])

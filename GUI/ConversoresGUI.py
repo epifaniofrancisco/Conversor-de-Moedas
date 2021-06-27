@@ -1,16 +1,51 @@
 from API.api import dados_api
+from Funcoes.Conversores_Calculo import convertAOA_EUR, convertAOA_USD, convertAOA_BRL, convertAOA_GBP  # KWANZA
 from Funcoes.Conversores_Calculo import convertEUR_AOA, convertEUR_USD, convertEUR_BRL, convertEUR_GBP  # EURO
 from Funcoes.Conversores_Calculo import convertUSD_AOA, convertUSD_EUR, convertUSD_BRL, convertUSD_GBP  # DOLAR
 from Funcoes.Conversores_Calculo import convertBRL_AOA, convertBRL_EUR, convertBRL_USD, convertBRL_GBP  # REAIS
 from Funcoes.Conversores_Calculo import convertGBP_AOA, convertGPB_EUR, convertGPB_USD, convertGBP_BRL  # LIBRAS
 
-
 dados = dados_api()
+
+""" KWANZA - AOA """
+
+
+def convertAOAEUR(tela):
+    valor = int(tela.txtBoxDe.text())
+    conversao = convertAOA_EUR(valor, float(dados[5]), float(dados[4]))
+
+    total = str(conversao)
+    tela.txtBoxPara.setText(total)
+
+
+def convertAOAUSD(tela):
+    valor = int(tela.txtBoxDe.text())
+    conversao = convertAOA_USD(valor, float(dados[4]))
+
+    total = str(conversao)
+    tela.txtBoxPara.setText(total)
+
+
+def convertAOABRL(tela):
+    valor = int(tela.txtBoxDe.text())
+    conversao = convertAOA_BRL(valor, float(dados[6]), float(dados[4]))
+
+    total = str(conversao)
+    tela.txtBoxPara.setText(total)
+
+
+def convertAOAGBP(tela):
+    valor = int(tela.txtBoxDe.text())
+    conversao = convertAOA_GBP(valor, float(dados[7]), float(dados[4]))
+
+    total = str(conversao)
+    tela.txtBoxPara.setText(total)
+
 
 """ EUR - EURO """
 
 
-def EURAOA(tela):
+def convertEURAOA(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertEUR_AOA(valor, float(dados[0]))
 
@@ -18,7 +53,7 @@ def EURAOA(tela):
     tela.txtBoxPara.setText(total)
 
 
-def EURUSD(tela):
+def convertEURUSD(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertEUR_USD(valor, float(dados[1]))
 
@@ -26,15 +61,15 @@ def EURUSD(tela):
     tela.txtBoxPara.setText(total)
 
 
-def EURBRL(tela):
+def convertEURBRL(tela):
     valor = int(tela.txtBoxDe.text())
-    conversao = convertEUR_USD(valor, float(dados[2]))
+    conversao = convertEUR_BRL(valor, float(dados[2]))
 
     total = str(conversao)
     tela.txtBoxPara.setText(total)
 
 
-def EURGBP(tela):
+def convertEURGBP(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertEUR_GBP(valor, float(dados[3]))
 
@@ -45,7 +80,7 @@ def EURGBP(tela):
 """ USD - DOLAR """
 
 
-def USDAOA(tela):
+def convertUSDAOA(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertUSD_AOA(valor, float(dados[4]))
 
@@ -53,7 +88,7 @@ def USDAOA(tela):
     tela.txtBoxPara.setText(total)
 
 
-def USDEUR(tela):
+def convertUSDEUR(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertUSD_EUR(valor, float(dados[5]))
 
@@ -61,7 +96,7 @@ def USDEUR(tela):
     tela.txtBoxPara.setText(total)
 
 
-def USDBRL(tela):
+def convertUSDBRL(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertUSD_BRL(valor, float(dados[6]))
 
@@ -69,17 +104,9 @@ def USDBRL(tela):
     tela.txtBoxPara.setText(total)
 
 
-def USDGBP(tela):
+def convertUSDGBP(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertUSD_GBP(valor, float(dados[7]))
-
-    total = str(conversao)
-    tela.txtBoxPara.setText(total)
-
-
-def BRLAOA(tela):
-    valor = int(tela.txtBoxDe.text())
-    conversao = convertBRL_AOA(valor, float(dados[6]), dados[4])
 
     total = str(conversao)
     tela.txtBoxPara.setText(total)
@@ -88,7 +115,15 @@ def BRLAOA(tela):
 """ BRL - REAIS """
 
 
-def BRLEUR(tela):
+def convertBRLAOA(tela):
+    valor = int(tela.txtBoxDe.text())
+    conversao = convertBRL_AOA(valor, float(dados[6]), float(dados[4]))
+
+    total = str(conversao)
+    tela.txtBoxPara.setText(total)
+
+
+def convertBRLEUR(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertBRL_EUR(valor, float(dados[8]))
 
@@ -96,7 +131,7 @@ def BRLEUR(tela):
     tela.txtBoxPara.setText(total)
 
 
-def BRLUSD(tela):
+def convertBRLUSD(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertBRL_USD(valor, float(dados[9]))
 
@@ -104,7 +139,7 @@ def BRLUSD(tela):
     tela.txtBoxPara.setText(total)
 
 
-def BRLGBP(tela):
+def convertBRLGBP(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertBRL_GBP(valor, float(dados[10]))
 
@@ -115,7 +150,7 @@ def BRLGBP(tela):
 """ GBP - LIBRAS """
 
 
-def GBPAOA(tela):
+def convertGBPAOA(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertGBP_AOA(valor, float(dados[7]), float(dados[4]))
 
@@ -123,7 +158,7 @@ def GBPAOA(tela):
     tela.txtBoxPara.setText(total)
 
 
-def GBPEUR(tela):
+def convertGBPEUR(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertGPB_EUR(valor, float(dados[11]))
 
@@ -131,7 +166,7 @@ def GBPEUR(tela):
     tela.txtBoxPara.setText(total)
 
 
-def GBPUSD(tela):
+def convertGBPUSD(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertGPB_USD(valor, float(dados[12]))
 
@@ -139,7 +174,7 @@ def GBPUSD(tela):
     tela.txtBoxPara.setText(total)
 
 
-def GBPBRL(tela):
+def convertGBPBRL(tela):
     valor = int(tela.txtBoxDe.text())
     conversao = convertGBP_BRL(valor, float(dados[13]))
 
